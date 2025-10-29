@@ -1,6 +1,48 @@
 body {
   background-color: #000;
   color: antiquewhite;
-  p {
+
+  header {
+    max-width: 1110px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      border-radius: 150px;
+      width: 30%;
+    }
+  }
+  hr {
+    max-width: 1110px;
+    margin-bottom: 20px;
+  }
+  main {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+    section {
+      background-color: rgb(31, 31, 28);
+      padding: 20px;
+
+      h1 {
+      }
+      p {
+        a {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+  footer {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+    }
   }
 }
