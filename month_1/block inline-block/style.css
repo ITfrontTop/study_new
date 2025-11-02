@@ -1,0 +1,14 @@
+p {
+  font-size: 24px;
+  background-color: green;
+}
+
+.container {
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(184, 184, 184);
+}
+
+.main {
+  text-align: center;
+}
