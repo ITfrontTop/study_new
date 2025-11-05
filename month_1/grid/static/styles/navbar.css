@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  background-color: rgb(133, 133, 133);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list a:hover {
+  background-color: rgb(157, 156, 156);
+}

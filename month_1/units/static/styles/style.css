@@ -1,0 +1,31 @@
+html {
+  font-size: 30px;
+}
+
+p {
+  font-size: 2em;
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  /* em - реагирует на размер шрифта родителя,  rem - реагирует на размер шрифта html (который по умолчанию 16px) или который мы задали */
+  margin: 4em;
+  font-size: 0.5rem;
+}
+
+#red {
+  background-color: #c21616;
+}
+
+#green {
+  background-color: #44c216;
+}
+
+#yellow {
+  background-color: #d5f505;
+}
+
+#grey {
+  background-color: #797777;
+}
