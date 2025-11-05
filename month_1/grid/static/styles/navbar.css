@@ -17,3 +17,39 @@
 .nav-list a:hover {
   background-color: rgb(157, 156, 156);
 }
+
+.nav-btn {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .nav-btn {
+    font-size: 2em;
+    padding-inline: 10px;
+    padding-bottom: 2px;
+    border: none;
+    background-color: rgb(133, 133, 133);
+    color: #fff;
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-btn:hover {
+    background-color: rgb(157, 156, 156);
+  }
+
+  .drop:hover .nav-list {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: rgb(133, 133, 133);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
