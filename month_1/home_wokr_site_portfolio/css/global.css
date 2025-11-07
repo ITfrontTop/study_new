@@ -1,0 +1,10 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #ee3d1b;
+  --primary: #d52047;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+}
