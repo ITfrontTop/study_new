@@ -1,7 +1,0 @@
-@import './reset.css';
-@import './global.css';
-
-.header {
-  height: 200px;
-  background-color: var(--primary);
-}

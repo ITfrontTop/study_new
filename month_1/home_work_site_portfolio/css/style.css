@@ -1,0 +1,68 @@
+@import './reset.css';
+@import './global.css';
+
+/* header section */
+.header {
+  min-height: 100vh;
+  padding-top: 17px;
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__nav-inner {
+  height: 100px;
+  padding: 33px 0;
+  /* margin-top: 17px; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav section */
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav__link {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 11px 28px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* title section */
+.header__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px;
+  /* проверить */
+  height: 90vh;
+}
