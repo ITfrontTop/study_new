@@ -38,6 +38,10 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
+  cursor: pointer;
+}
+
+.nav__link:hover {
 }
 
 .settings {
@@ -54,6 +58,14 @@
   border-radius: 8px;
   text-transform: uppercase;
   color: var(--white);
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.login:hover {
+  color: var(--primary);
+  background-color: var(--white);
 }
 
 /* title section */
@@ -64,5 +76,37 @@
   align-items: center;
   gap: 39px;
   /* проверить */
-  height: 90vh;
+  height: 85vh;
+}
+
+.header__content-title {
+  font-size: 72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.header__content-text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  text-align: center;
+  color: var(--white);
+  width: 540px;
+}
+
+.header__content-btn {
+  padding: 16px 52px;
+  background-color: var(--white);
+  color: #ed4c5c;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.header__content-btn:hover {
+  color: var(--white);
+  background-color: transparent;
 }
