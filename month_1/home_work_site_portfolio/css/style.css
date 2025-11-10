@@ -98,7 +98,7 @@
 .header__content-btn {
   padding: 16px 52px;
   background-color: var(--white);
-  color: #ed4c5c;
+  color: var(--primary);
   border-radius: 8px;
   text-transform: uppercase;
   cursor: pointer;
@@ -109,4 +109,56 @@
 .header__content-btn:hover {
   color: var(--white);
   background-color: transparent;
+}
+
+/* info section */
+.info__inner {
+  padding: 94px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 125px;
+}
+
+.info__video-inner {
+  position: relative;
+}
+
+.info__video {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.info__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px;
+  height: 66px;
+  background-color: var(--primary);
+  background-image: url(../img/play-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 55% 50%;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+}
+
+.info__text-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+.info__text-description {
+  font-size: 14px;
+  line-height: 140%;
+  margin-bottom: 19px;
+}
+
+.info__text-link {
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--primary);
 }

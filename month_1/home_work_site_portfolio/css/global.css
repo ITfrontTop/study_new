@@ -2,11 +2,12 @@
   --white: #fff;
   --black: #000;
   --red: #ee3d1b;
-  --primary: #d52047;
+  --primary: #ed4c5c;
 }
 
 html {
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
 
 .container {
