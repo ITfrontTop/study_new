@@ -267,3 +267,37 @@
   font-weight: 400;
   width: 195px;
 }
+
+/* app section */
+.app {
+  padding: 94px 0 95px;
+  background-color: var(--primary);
+}
+
+.app__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__content {
+  width: 450px;
+}
+
+.app__content-title {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.app__content-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+
+.app__content-box {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
