@@ -301,3 +301,34 @@
   align-items: center;
   gap: 23px;
 }
+
+/* contact section */
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 114px;
+  padding: 117px 0 123px;
+}
+
+.contact__info-title {
+  margin-bottom: 53px;
+  color: var(--black);
+  position: relative;
+}
+
+.contact__info-title::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -28px;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #000;
+}
+
+.contact__info-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--black);
+}
