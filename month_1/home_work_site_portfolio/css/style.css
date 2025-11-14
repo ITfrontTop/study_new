@@ -377,3 +377,56 @@
   text-transform: uppercase;
   color: var(--white);
 }
+
+/* footer */
+.footer {
+  padding: 85px 0 86px;
+  background-color: #fafafa;
+}
+
+.footer__menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 85px;
+}
+
+.footer__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 33px;
+}
+
+.footer__service-title {
+  margin-bottom: 28px;
+}
+
+.footer__address-text {
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--black);
+}
+
+.footer__service-link {
+  font-size: 12px;
+  line-height: 160%;
+  color: var(--black);
+}
+
+.footer__info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.footer__info-social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 11px;
+}
+
+.copy__info {
+  font-size: 12px;
+}
