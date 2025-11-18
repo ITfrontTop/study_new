@@ -174,7 +174,7 @@
 }
 
 .info__video {
-  width: 500px;
+  width: clamp(270px, 60vw, 500px);
   border-radius: 10px;
 }
 
@@ -199,7 +199,7 @@
 }
 
 .info__text-description {
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   line-height: 140%;
   margin-bottom: 19px;
 }
@@ -562,5 +562,18 @@
 
   .header__content-btn-text {
     font-size: 12px;
+  }
+
+  .info__inner {
+    padding: 50px 0;
+    gap: 50px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .info__video {
+    width: 270px;
   }
 }
