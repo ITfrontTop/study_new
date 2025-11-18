@@ -117,61 +117,6 @@
   background-color: var(--white);
 }
 
-@media (max-width: 950px) {
-  .header__burger-btn {
-    display: block;
-  }
-
-  .nav__link {
-    color: var(--primary);
-    display: block;
-    padding: 10px 0;
-  }
-
-  .nav__list {
-    position: absolute;
-    left: -350px;
-    top: 0;
-    width: 350px;
-    display: block;
-    background-color: #fff;
-    padding: 100px 20px 20px;
-    transition: transform 0.5s;
-  }
-
-  .header__nav-inner.open .nav__list {
-    transform: translateX(100%);
-  }
-
-  /* замена кольору кнопки */
-  .header__nav-inner.open .header__burger-btn span {
-    background-color: var(--primary);
-  }
-
-  /* настройка login, languages */
-  .login__box {
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
-  .settings {
-    position: relative;
-  }
-
-  .settings__block {
-    position: absolute;
-    top: -200px;
-    left: -160px;
-    padding: 80px 0 0;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .settings.open .settings__block {
-    transform: translateY(150%);
-  }
-}
-
 /* title section */
 .header__content {
   display: flex;
@@ -184,14 +129,14 @@
 }
 
 .header__content-title {
-  font-size: 72px;
+  font-size: clamp(30px, 7vw, 72px);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
 }
 
 .header__content-text {
-  font-size: 24px;
+  font-size: clamp(14px, 3vw, 24px);
   font-weight: 600;
   line-height: 150%;
   text-align: center;
@@ -533,4 +478,89 @@
 
 .copy__info {
   font-size: 12px;
+}
+
+/*************** MEDIA ***************/
+
+@media (max-width: 950px) {
+  .header__nav-inner {
+    height: fit-content;
+    padding: 0;
+  }
+
+  .header__burger-btn {
+    display: block;
+  }
+
+  .logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__link {
+    color: var(--primary);
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav__list {
+    position: absolute;
+    left: -350px;
+    top: 0;
+    width: 350px;
+    display: block;
+    background-color: #fff;
+    padding: 100px 20px 20px;
+    transition: transform 0.5s;
+  }
+
+  .header__nav-inner.open .nav__list {
+    transform: translateX(100%);
+  }
+
+  /* замена кольору кнопки */
+  .header__nav-inner.open .header__burger-btn span {
+    background-color: var(--primary);
+  }
+
+  /* настройка login, languages */
+  .login__box {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .settings {
+    position: relative;
+  }
+
+  .settings__block {
+    position: absolute;
+    top: -200px;
+    left: -160px;
+    padding: 80px 0 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .settings.open .settings__block {
+    transform: translateY(150%);
+  }
+
+  .header__content {
+    gap: 20px;
+  }
+
+  .header__content-text {
+    width: 290px;
+  }
+
+  .header__content-btn {
+    padding: 10px 32px;
+  }
+
+  .header__content-btn-text {
+    font-size: 12px;
+  }
 }
