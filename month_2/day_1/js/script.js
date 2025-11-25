@@ -14,4 +14,5 @@ if (fahrenheit === 32 || String) {
   alert(`Введите температуру заново`);
 } else {
   alert(`${fahrenheit} - температура в Фаренгейтах - F`);
+  console.log(fahrenheit);
 }
