@@ -64,3 +64,26 @@ const myCity6 = {
     country: 'USA'
   }
 };
+
+console.log(myCity6.info.isPopular);
+delete myCity6.info['isPopular'];
+console.log(myCity6);
+
+// Использование переменных при формировании объекта
+const name = 'Bogdan';
+const postsQty = 23;
+
+const userProfile = {
+  name: name,
+  postsQty: postsQty,
+  hasSignedAgreement: false
+};
+
+// Если название свойства и переменной совпадают можна просто сокращать оставляя просто одно слово, можна сокращать
+// И сокращенные свойства рекомендуется размещать в начале объекта
+
+const userProfile1 = {
+  name,
+  postsQty,
+  hasSignedAgreement: false
+};
