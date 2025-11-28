@@ -1,137 +1,46 @@
 // Написати міні-калькулятор: + - * /
-// Розрахунок відсотків (напр. 20% від числа)
+const value1 = document.querySelector('.value1');
+const value2 = document.querySelector('.value2');
+const value3 = document.querySelector('.value3');
+const value4 = document.querySelector('.value4');
+const btn = document.querySelector('.btn');
 
-// берем елементи
-const input = document.querySelector('.input');
-const one = document.querySelector('.one');
-const two = document.querySelector('.two');
-const tree = document.querySelector('.tree');
-const multiply = document.querySelector('.multiply');
-const four = document.querySelector('.four');
-const five = document.querySelector('.five');
-const six = document.querySelector('.six');
-const divide = document.querySelector('.divide');
-const seven = document.querySelector('.seven');
-const eight = document.querySelector('.eight');
-const nine = document.querySelector('.nine');
-const minus = document.querySelector('.minus');
-const dot = document.querySelector('.dot');
-const zero = document.querySelector('.zero');
-const equals = document.querySelector('.equals');
-const plus = document.querySelector('.plus');
-const ac = document.querySelector('.ac');
-const percent = document.querySelector('.percent');
-
-// берем данные с input
-// equals.addEventListener('click', function () {
-//   const inputData = input.value;
-//   console.log(inputData, typeof inputData);
-// });
-
-// Общая переменная для вывода в input
-let valueDisplay = '';
-let plusDisplay = 0;
 let result = 0;
 
-// Добавляєм кнопку 1
-one.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '1';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
+btn.addEventListener('click', function () {
+  let result = 0;
+
+  console.log(value2.value);
+
+  switch (value2.value) {
+    case '+':
+      result = Number(value1.value) + Number(value3.value);
+      break;
+    case '-':
+      result = Number(value1.value) - Number(value3.value);
+      break;
+    case '*':
+      result = Number(value1.value) * Number(value3.value);
+      break;
+    case '/':
+      result = Number(value1.value) / Number(value3.value);
+      break;
+    default:
+      result = 'Введите данные для подсчета';
+  }
+
+  value4.value = result;
+
+  console.log(Number(value1.value), value2.value, Number(value3.value));
 });
 
-// Добавляєм кнопку 2
-two.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '2';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
+// Розрахунок відсотків (напр. 20% від числа)
+const value5 = document.querySelector('.value5');
+const value6 = document.querySelector('.value6');
+const btn2 = document.querySelector('.btn2');
+const value7 = document.querySelector('.value7');
 
-// Добавляєм кнопку 3
-tree.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '3';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 4
-four.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '4';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 5
-five.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '5';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 6
-six.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '6';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 7
-seven.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '7';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 8
-eight.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '8';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 9
-nine.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '9';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку 0
-zero.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '0';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-  console.log(typeof valueDisplay);
-});
-
-// Добавляєм кнопку multiply (помножити)
-multiply.addEventListener('click', function () {
-  valueDisplay = valueDisplay + '*';
-  input.value = valueDisplay;
-  console.log(valueDisplay);
-});
-
-// Добавляєм кнопку plus (плюс)
-plus.addEventListener('click', function () {
-  plusDisplay = +valueDisplay + plusDisplay;
-  // чистим дисплей
-  valueDisplay = '';
-});
-
-// Добавляєм кнопку equals (дорівнює)
-equals.addEventListener('click', function () {
-  // Додається правильно, зробити для множення и ділення
-  result = +valueDisplay + plusDisplay;
-
-  input.value = result;
-  console.log(result);
+btn2.addEventListener('click', function () {
+  const equalPercent = +value5.value * (+value6.value / 100);
+  value7.value = equalPercent;
 });
