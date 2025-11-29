@@ -1,0 +1,26 @@
+@import './reset.css';
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.content {
+  background-color: #c2c1c1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn,
+.btn2 {
+  text-align: center;
+  padding: 10px;
+  background-color: #2a9fe8;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
