@@ -18,7 +18,10 @@
 
 .btn,
 .btn1,
-.btn2 {
+.btn2,
+.btn3,
+.btn4,
+.btn5 {
   padding: 5px;
   text-align: center;
   background-color: #f2ae5b;
