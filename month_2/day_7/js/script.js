@@ -149,3 +149,138 @@ btn5.addEventListener('click', function () {
 });
 
 // 7. Підрахунок голосних
+const text6 = document.querySelector('.text6');
+const word = document.querySelector('.word');
+const btn6 = document.querySelector('.btn6');
+
+btn6.addEventListener('click', function () {
+  const wordValue = word.value;
+  const wordArray = Array.from(wordValue);
+  let number = 0;
+
+  for (let i = 0; i < wordArray.length; i++) {
+    switch (wordArray[i]) {
+      // латиниця
+      case 'a':
+        number++;
+        break;
+      case 'e':
+        number++;
+        break;
+      case 'i':
+        number++;
+        break;
+      case 'o':
+        number++;
+        break;
+      case 'u':
+        number++;
+        break;
+      case 'y':
+        number++;
+        break;
+      // кирилиця
+      case 'а':
+        number++;
+        break;
+      case 'е':
+        number++;
+        break;
+      case 'и':
+        number++;
+        break;
+      case 'і':
+        number++;
+        break;
+      case 'о':
+        number++;
+        break;
+      case 'у':
+        number++;
+        break;
+      case 'ы':
+        number++;
+        break;
+    }
+  }
+
+  text6.textContent = `Word has - ${number} voice letters`;
+  word.value = '';
+});
+
+// 8. Мінімум у масиві
+const numberArray = [7, -3, 0, 12, 5, -9, 4];
+let minimalNumber = Infinity;
+
+for (let i = 0; i < numberArray.length; i++) {
+  let numberLoop = numberArray[i];
+  if (numberLoop < minimalNumber) minimalNumber = numberLoop;
+}
+console.log(minimalNumber);
+
+// 9. Реверс рядка
+const text7 = document.querySelector('.text7');
+const word1 = document.querySelector('.word1');
+const btn7 = document.querySelector('.btn7');
+
+btn7.addEventListener('click', function () {
+  // Беру данные с input
+  const wordValue = word1.value;
+  // делаю массив
+  const wordArray = Array.from(wordValue);
+  // переменная для revers
+  let reversArray = [];
+
+  for (let i = 0; (i = wordArray.length); i++) {
+    const itemReversArray = wordArray.pop();
+    reversArray.push(itemReversArray);
+  }
+  // виводимо данні
+  text7.textContent = reversArray.join('');
+  // очищаємо input
+  word1.value = '';
+});
+
+// 10. Функція калькулятора
+function calculate(a, b, operator) {
+  let result = 0;
+  switch (operator) {
+    case '+':
+      result = a + b;
+      break;
+    case '-':
+      result = a - b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      result = a / b;
+      break;
+    default:
+      return console.log('Enter correct operator');
+  }
+  return result;
+}
+
+calculate(5, 2, '*');
+
+// Маленький тест (15 питань)
+// 1.C
+// 2.B про це питання тільки коли перевірив зрозумів;
+// 3.D
+// 4.C
+// 5.B
+// 6.C
+// 7.C також не знав цього, загуглив
+// 8.B
+// 9.A
+// 10.A
+// 11.C
+// 12.C
+// 13.B
+// 14.B
+// 15.C
+
+// 10 задач (легкі–середні)
+// 1. Чи парне число
