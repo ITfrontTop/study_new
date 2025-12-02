@@ -47,7 +47,54 @@ sumArray([1, 4, 15]);
 // Функція, що генерує випадковий пароль
 function randomPassword(n) {
   const newPassword = [];
-  const randomNumber = [];
+  const data = [
+    'q',
+    'w',
+    'e',
+    'r',
+    't',
+    'y',
+    'u',
+    'i',
+    'o',
+    'p',
+    'a',
+    's',
+    'd',
+    'f',
+    'g',
+    'h',
+    'j',
+    'k',
+    'l',
+    'z',
+    'x',
+    'c',
+    'v',
+    'b',
+    'n',
+    'm',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '0'
+  ];
+
+  for (let i = 0; i < n; i++) {
+    const element = Math.floor(Math.random() * 36 + 1);
+    newPassword.push(data[element]);
+  }
+  console.log(Math.floor(Math.random() * 36 + 1));
+  console.log(data);
+  console.log(newPassword);
+  console.log(newPassword.join(''));
+  return newPassword.join();
 }
-// 6 - це кількість символів пароля
+// 6 - це кількість символів пароля, можна вибирати яку завгодно кількість
 randomPassword(6);
