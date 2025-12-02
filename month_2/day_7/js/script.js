@@ -284,3 +284,164 @@ calculate(5, 2, '*');
 
 // 10 задач (легкі–середні)
 // 1. Чи парне число
+function isEvent(n) {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// 2. Максимум з двох
+function max(a, b) {
+  if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+
+// 3. Повернути першу і останню літеру
+function edgeLetters(str) {
+  let result = [];
+  const wordsArray = Array.from(str);
+  result.push(wordsArray.shift());
+  result.push(wordsArray.pop());
+  return result;
+}
+
+edgeLetters('hello');
+
+// 4. Калькулятор з трьома параметрами
+function calc(a, b, op) {
+  let result = 0;
+  switch (op) {
+    case '+':
+      result = a + b;
+      break;
+    case '-':
+      result = a - b;
+      break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      result = a / b;
+      break;
+    default:
+      return console.log('Enter correct operator');
+  }
+  return result;
+}
+
+calc(14, 5, '+');
+
+// 5. Перевірити, чи є літера в слові
+function hasLetter(str, letter) {
+  const word = Array.from(str);
+  let result = false;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
+      result = true;
+    }
+  }
+  return result;
+}
+hasLetter('hello', 'e');
+
+// 6. Підрахунок суми масиву
+function sum1(arr) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    result += arr[i];
+  }
+  return result;
+}
+sum1([2, 3, 4]);
+
+// 7. Реверс масиву без reverse()
+function reverseArray(arr) {
+  let arrayRevers = [];
+  for (let i = 0; (i = arr.length); i++) {
+    arrayRevers.push(arr.pop());
+  }
+  return arrayRevers;
+}
+
+reverseArray(['a', 'b', 'c', 'd', 'e']);
+
+// 8. Найменше число з масиву
+function min(arr) {
+  let minimalNumber = 0;
+  for (let item of arr) {
+    if (item < minimalNumber) minimalNumber = item;
+  }
+  return minimalNumber;
+}
+
+min([1, 2, -5, 0]);
+
+// 9. Підрахувати голосні в рядку
+function countVowels(str) {
+  const strArray = Array.from(str);
+  let voices = 0;
+  for (let i = 0; i < strArray.length; i++) {
+    switch (strArray[i]) {
+      // латиниця
+      case 'a':
+        voices++;
+        break;
+      case 'e':
+        voices++;
+        break;
+      case 'i':
+        voices++;
+        break;
+      case 'o':
+        voices++;
+        break;
+      case 'u':
+        voices++;
+        break;
+      case 'y':
+        voices++;
+        break;
+      // кирилиця
+      case 'а':
+        voices++;
+        break;
+      case 'е':
+        voices++;
+        break;
+      case 'и':
+        voices++;
+        break;
+      case 'і':
+        voices++;
+        break;
+      case 'о':
+        voices++;
+        break;
+      case 'у':
+        voices++;
+        break;
+      case 'ы':
+        voices++;
+        break;
+    }
+  }
+  return voices;
+}
+
+countVowels('hello');
+
+// 10. Фільтр чисел більше 10
+function filterGreater10(arr) {
+  let newArray = [];
+  for (let item of arr) {
+    if (item > 10) newArray.push(item);
+  }
+  console.log(newArray);
+}
+
+filterGreater10([1, 14, 23, 134, 3, 4, 6]);
