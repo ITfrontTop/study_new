@@ -245,14 +245,35 @@ function uppercaseWordInArray(str) {
 uppercaseWordInArray('привіт світе');
 
 // 11. Перевірити складність пароля
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Функція isStrongPassword(str)
-// Пароль сильний, якщо:
-// ≥ 8 символів
-// є велика літера
-// є маленька літера
-// є цифра
-// є спецсимвол
+function isStrongPassword(str) {
+  const arr = str.split('');
+
+  let countStrongMain = 0;
+
+  if (arr.length >= 8) countStrongMain += 1;
+
+  const countBigLetter = arr.some((item) => /[A-ZА-ЯЁ]/.test(item));
+
+  const countSmallLetter = arr.some((item) => /[a-zа-яё]/.test(item));
+
+  const countNumber = arr.some((item) => /[0-9]/.test(item));
+
+  const countSymbol = arr.some((item) => /[^A-Za-z0-9]/.test(item));
+
+  if (
+    countStrongMain > 0 &&
+    countBigLetter &&
+    countSmallLetter &&
+    countNumber &&
+    countSymbol
+  ) {
+    return console.log('Its password strong)');
+  } else {
+    return console.log('Its password weak(');
+  }
+}
+
+isStrongPassword('Far47&12R');
 
 // 12. Знайти середнє арифметичне
 function average(arr) {
@@ -266,8 +287,10 @@ function average(arr) {
 average([1, 3, 4, 5, 2, 434]);
 
 // 13. Перетворити число в формат валюти
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// toMoney(1234567) → "1 234 567"
+function toMoney(num) {
+  return num.toLocaleString('uk-UA');
+}
+toMoney(1234567);
 
 // 14. Функція-перевертень числа
 function reverseNumber(num) {
