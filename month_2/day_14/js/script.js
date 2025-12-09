@@ -53,19 +53,21 @@ function pairedNumbers(arr) {
 pairedNumbers([2, 3, 5, 6, 7, 8, 1, 3, 10]);
 
 // 3. Сортування масиву вручну
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function sortArray(arr) {
-  // let sortArray = [];
-  // for (let i = 0; i <= arr.length; i++) {
-  //   console.log(arr[i]);
-  //   if (arr[i] > arr[i + 1]) sortArray.push(arr[i]);
-  //   console.log(arr[i + 1]);
-  //   console.log(sortArray);
-  // }
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let buffer = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = buffer;
+      }
+    }
+  }
+
+  return arr;
 }
 
-sortArray([2, 5, 4, 3, 1, 6]);
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+bubbleSort([2, 5, 4, 3, 1, 6]);
 
 // 4. Порахувати кількість слів у рядку
 function numberWord(str) {
@@ -97,9 +99,21 @@ function palindrome(str) {
 
 palindrome('Hello');
 
-// 7. Найчастіший символ у рядку !!!!!!!!!!!!!!!!!!!!!!!!
+// 7. Найчастіший символ у рядку
 function repeatable(str) {
-  const arrayStr = Array.from(str);
+  const items = {};
+  let count = 0;
+  let itemMax = '';
+
+  for (const item of str) {
+    items[item] = (items[item] || 0) + 1;
+
+    if (items[item] > count) {
+      count = items[item];
+      itemMax = item;
+    }
+  }
+  return itemMax;
 }
 
 repeatable('hello');
@@ -132,7 +146,11 @@ function concatNew(arr1, arr2) {
 concatNew(['hello', 2], [3, 6, 'world']);
 
 // 10. Перетворити об’єкт у масив пар ключ–значення
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function objOnArr(obj) {
+  const arrKeysValue = Object.entries(obj);
+  return arrKeysValue;
+}
+objOnArr({ a: 1, b: 2 });
 
 // 11. Знайти суму всіх чисел у вкладеному масиві
 function sum(arr) {
@@ -147,3 +165,122 @@ function sum(arr) {
 sum([1, [2, [4], 3], [4, [5]]]);
 
 // 12. Розвернути кожне слово в реченні
+function reverseWord(str) {
+  const arrayStr = str.split(' ');
+  let arrayNew = [];
+  for (let i = 0; i < arrayStr.length; i++) {
+    const arrItem = Array.from(arrayStr[i]);
+    const newWord = arrItem.reverse().join('');
+    arrayNew.push(newWord);
+  }
+  return arrayNew.join(' ');
+}
+
+reverseWord('hello world');
+
+// 13. Видалити всі пробіли в рядку
+function deleteSpace(str) {
+  const arrayStr = Array.from(str);
+  let items = [];
+  for (let i = 0; i < arrayStr.length; i++) {
+    if (arrayStr[i] !== ' ') items.push(arrayStr[i]);
+  }
+  return items.join('');
+}
+
+deleteSpace(' I love JS');
+
+// 14. Перевірка — чи є в рядку цифра
+function isNumber(str) {
+  const arrayStr = Array.from(str);
+  const hasNumber = arrayStr.some((item) => !isNaN(parseFloat(item)));
+  return hasNumber;
+}
+
+isNumber('dgtrgd');
+
+// 15. Перевірити, чи два рядки — анаграми
+function anagram(str1, str2) {
+  const arr1 = Array.from(str1);
+  const arr2 = Array.from(str2);
+  const newArray1 = arr1.sort();
+  const newArray2 = arr2.sort();
+  return JSON.stringify(newArray1) === JSON.stringify(newArray2);
+}
+
+anagram('listen', 'silent');
+
+// Дороблюю задачі які задав, і перевіряю щоб не повторювались
+
+// 3. Частота символів
+function charFrequency(str) {
+  const charItems = {};
+
+  for (const item of str) {
+    charItems[item] = (charItems[item] || 0) + 1;
+  }
+  return charItems;
+}
+charFrequency('hello');
+
+// 6. Рандомне число в діапазоні
+function randomNumberValue(min, max) {
+  const random = Math.floor(Math.random() * (max - min + 1) + min);
+  return random;
+}
+
+randomNumberValue(3, 6);
+
+// 8. Перетворити речення у Capitalized Case
+function uppercaseWordInArray(str) {
+  const arr = str.split(' ');
+  const arrNew = [];
+  for (let i = 0; i < arr.length; i++) {
+    const arrInLoop = arr[i].split('');
+    arrInLoop[0] = arrInLoop[0].toUpperCase();
+    arrNew.push(arrInLoop.join(''));
+  }
+  return arrNew.join(' ');
+}
+uppercaseWordInArray('привіт світе');
+
+// 11. Перевірити складність пароля
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Функція isStrongPassword(str)
+// Пароль сильний, якщо:
+// ≥ 8 символів
+// є велика літера
+// є маленька літера
+// є цифра
+// є спецсимвол
+
+// 12. Знайти середнє арифметичне
+function average(arr) {
+  let sum = 0;
+  for (let item of arr) {
+    sum += item;
+  }
+  return +(sum / arr.length).toFixed(2);
+}
+
+average([1, 3, 4, 5, 2, 434]);
+
+// 13. Перетворити число в формат валюти
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// toMoney(1234567) → "1 234 567"
+
+// 14. Функція-перевертень числа
+function reverseNumber(num) {
+  const arr = String(num).split('');
+  const newArr = [];
+  for (let i = 0; (i = arr.length); i++) {
+    newArr.push(arr.pop(i));
+  }
+  return +newArr.join('');
+}
+
+reverseNumber(1234);
+
+// 15. Створити власний split()
+
+// mySplit("a,b,c", ",") → ["a","b","c"]
