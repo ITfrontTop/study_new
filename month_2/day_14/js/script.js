@@ -306,4 +306,14 @@ reverseNumber(1234);
 
 // 15. Створити власний split()
 
-// mySplit("a,b,c", ",") → ["a","b","c"]
+function mySplit(str) {
+  const arr = Array.from(str);
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    const item = /[^A-Za-z0-9]/.test(arr[i]);
+    if (item === false) newArray.push(arr[i]);
+  }
+  return newArray;
+}
+
+mySplit('a,b,c', ',');
