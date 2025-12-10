@@ -1,0 +1,31 @@
+@import './reset.css';
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: rgb(225, 221, 221);
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text {
+  padding: 20px;
+}
+
+.btn {
+  background-color: #2cebc5;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
