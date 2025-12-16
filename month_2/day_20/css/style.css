@@ -1,0 +1,82 @@
+@import './reset.css';
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s linear;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 2px solid rgb(37, 35, 35);
+  transition: all 0.5s linear;
+}
+
+.button {
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: 1px solid rgb(37, 35, 35);
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.check {
+  width: 22px;
+  height: 22px;
+  background-color: rgb(37, 35, 35);
+  border-radius: 50%;
+  margin: 4px;
+
+  animation-name: check-animation-go-light;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: all 0.5s linear;
+}
+
+.button.night {
+  background-color: rgb(37, 35, 35);
+  border: 1px solid #ffffff;
+  transition: all 0.5s linear;
+}
+
+.button.night .check.night {
+  animation-name: check-animation-go-night;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background-color: #e4e4e4;
+  transition: all 0.5s linear;
+}
+
+.header.night {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transition: all 0.5s linear;
+}
+
+.main.night {
+  background-color: rgb(37, 35, 35);
+  transition: all 0.5s linear;
+}
+
+@keyframes check-animation-go-night {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(28px);
+  }
+}
+
+@keyframes check-animation-go-light {
+  0% {
+    transform: translateX(28px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
