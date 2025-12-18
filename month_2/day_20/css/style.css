@@ -1,9 +1,18 @@
 @import './reset.css';
 
+body {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: rgb(37, 35, 35);
+}
+
 .main {
   width: 100vw;
   height: 100vh;
-  transition: all 0.5s linear;
 }
 
 .header {
@@ -12,71 +21,71 @@
   padding: 20px;
   border-bottom: 2px solid rgb(37, 35, 35);
   transition: all 0.5s linear;
+  width: 100%;
+}
+
+.dark-mode .header {
+  border-bottom: 2px solid #fff;
 }
 
 .button {
+  position: relative;
   width: 60px;
   height: 30px;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid rgb(37, 35, 35);
   cursor: pointer;
   transition: all 0.5s linear;
 }
 
-.check {
+.dark-mode .button {
+  background-color: rgb(37, 35, 35);
+  border: 1px solid #fff;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-69%);
   width: 22px;
   height: 22px;
   background-color: rgb(37, 35, 35);
   border-radius: 50%;
   margin: 4px;
-
-  animation-name: check-animation-go-light;
+  transition: all 0.5s ease-in-out;
+  animation-name: check-animation-go-left;
   animation-duration: 0.5s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  transition: all 0.5s linear;
 }
 
-.button.night {
-  background-color: rgb(37, 35, 35);
-  border: 1px solid #ffffff;
-  transition: all 0.5s linear;
-}
-
-.button.night .check.night {
-  animation-name: check-animation-go-night;
+.dark-mode .button::before {
+  background-color: #fff;
+  animation-name: check-animation-go-right;
   animation-duration: 0.5s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  background-color: #e4e4e4;
-  transition: all 0.5s linear;
 }
 
-.header.night {
-  border-bottom: 2px solid rgb(255, 255, 255);
-  transition: all 0.5s linear;
-}
-
-.main.night {
-  background-color: rgb(37, 35, 35);
-  transition: all 0.5s linear;
-}
-
-@keyframes check-animation-go-night {
+@keyframes check-animation-go-right {
   0% {
-    transform: translateX(0px);
+    left: 0;
   }
 
   100% {
-    transform: translateX(28px);
+    left: 49%;
   }
 }
 
-@keyframes check-animation-go-light {
+@keyframes check-animation-go-left {
   0% {
-    transform: translateX(28px);
+    left: 49%;
   }
 
   100% {
-    transform: translateX(0px);
+    left: 0;
   }
 }

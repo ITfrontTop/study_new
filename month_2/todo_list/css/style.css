@@ -1,0 +1,106 @@
+@import './reset.css';
+
+/* :root {
+  color: #122c34;
+  color: #0b4f6c;
+  color: #297ba0;
+  color: #006475;
+  color: #4ba3d9;
+  color: #6a989b;
+
+  цвет градиента default left
+  color: #575656;
+  цвет градиента default right
+  color: #0B3141;
+
+  цвет градиента light left
+  color:#D9F3FF
+  цвет градиента light right
+  color:#F9FDFF
+
+  
+  цвет градиента dark left
+  color:#001317
+  цвет градиента dark right
+  color:#001D26
+
+  цвет text
+  color: #FFDFDB;
+  цвет фона input
+  color: #181A1A;
+  цвет текст input
+  color: #757575;
+  цвет теми
+  color: #001920;
+  цвет кнопки go
+  color: #F7E2DF;
+  цвет кнопок виконано и удалено
+  color: #909094;
+
+  цвет активных кнопок виконано и удалено
+  color: #949FA4;
+
+  цвет фона задач
+  color: #242F33;
+  цвет текст задач
+  color: #948D8F;
+
+  цвет svg иконок
+  color: #142025;
+} */
+
+/* global */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+
+  /* display: flex;
+  flex-direction: column; */
+  transition: all 0.4s;
+}
+
+/* main {
+  flex-grow: 1;
+} */
+
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* style */
+.body {
+  /* default */
+  background: linear-gradient(to right, #575656, #0b3141);
+  /* light */
+  /* background: linear-gradient(to right, #d9f3ff, #f9fdff); */
+  /* dark */
+  /* background: linear-gradient(to right, #001317, #001d26); */
+}
+
+.header {
+  padding: 30px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__box {
+  display: flex;
+  gap: 15px;
+}
+
+.btn__default,
+.btn__light,
+.btn__dark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
