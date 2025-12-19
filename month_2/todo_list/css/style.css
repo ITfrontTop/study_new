@@ -64,9 +64,12 @@ body {
   transition: all 0.4s;
 }
 
-/* main {
-  flex-grow: 1;
-} */
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .container {
   max-width: 1300px;
@@ -103,4 +106,123 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  border: 1px solid #d9f3ff;
+  cursor: pointer;
+}
+
+.btn__default {
+  background: linear-gradient(to right, #575656, #0b3141);
+}
+
+.btn__light {
+  background: linear-gradient(to right, #d9f3ff, #f9fdff);
+}
+
+.btn__dark {
+  background: linear-gradient(to right, #001317, #001d26);
+}
+
+.title {
+  position: relative;
+  font-size: 70px;
+  font-weight: 400;
+  color: #ffdfdb;
+  margin-bottom: 30px;
+}
+
+.title::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  content: '';
+  width: 2px;
+  height: 70px;
+  background-color: #001317;
+  /* transition: all .5s ease-in-out; */
+
+  animation-name: cursor;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.search__inner {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  border-radius: 20px 0 0 20px;
+  padding: 0.75rem;
+  width: 450px;
+  border: none;
+  background-color: #181a1a;
+  outline: none;
+  color: #f7e2df;
+}
+
+.search__button {
+  border-radius: 0 20px 20px 0;
+  padding: 0.75rem 0.5rem;
+  width: 100px;
+  border: none;
+  background-color: #f7e2df;
+  cursor: pointer;
+}
+
+.data {
+  margin: 10px 0;
+}
+
+.data__text {
+  font-size: 14px;
+  font-weight: 200;
+  color: #f7e2df;
+}
+
+.todo__item {
+  padding: 8px 20px;
+  border-radius: 35px;
+  background-color: #242f33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  margin: 10px 0;
+}
+.todo__text {
+  width: 75%;
+  font-size: 20px;
+  font-weight: 300;
+  color: #948d8f;
+}
+
+.button__box {
+  display: flex;
+  gap: 10px;
+}
+
+.todo__do,
+.todo__delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #909094;
+  border: none;
+
+  svg {
+    fill: #142025;
+  }
 }
