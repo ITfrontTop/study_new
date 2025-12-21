@@ -101,14 +101,14 @@ body.dark-mode {
 
 .header__box {
   display: flex;
-  gap: 15px;
+  gap: clamp(10px, 1.1vw, 15px);
 }
 
 .btn__default,
 .btn__light,
 .btn__dark {
-  width: 30px;
-  height: 30px;
+  width: clamp(20px, 2.3vw, 30px);
+  height: clamp(20px, 2.3vw, 30px);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -130,10 +130,11 @@ body.dark-mode {
 
 .title {
   position: relative;
-  font-size: 70px;
+  font-size: clamp(30px, 5vw, 70px);
+
   font-weight: 400;
   color: #ffdfdb;
-  margin-bottom: 30px;
+  margin-bottom: clamp(15px, 4vw, 30px);
 }
 
 .light-mode .title {
@@ -147,7 +148,7 @@ body.dark-mode {
   transform: translateY(-50%);
   content: '';
   width: 2px;
-  height: 70px;
+  height: clamp(30px, 5vw, 70px);
   background-color: #001317;
   /* transition: all .5s ease-in-out; */
 
@@ -171,17 +172,17 @@ body.dark-mode {
 }
 
 .search__inner {
-  margin-bottom: 20px;
+  margin-bottom: clamp(10px, 2vw, 20px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search {
+  font-size: clamp(11px, 1.5vw, 14px);
   border-radius: 20px 0 0 20px;
   padding: 0.75rem;
-  width: 450px;
-  border: none;
+  width: clamp(200px, 60vw, 450px);
   background-color: #181a1a;
   outline: none;
   color: #f7e2df;
@@ -200,9 +201,10 @@ body.dark-mode {
 }
 
 .search__button {
+  font-size: clamp(11px, 1.5vw, 14px);
   border-radius: 0 20px 20px 0;
   padding: 0.75rem 0.5rem;
-  width: 100px;
+  width: clamp(80px, 10vw, 100px);
   background-color: #f7e2df;
   cursor: pointer;
   border: 1px solid transparent;
@@ -224,7 +226,7 @@ body.dark-mode {
 }
 
 .data__text {
-  font-size: 14px;
+  font-size: clamp(11px, 1.5vw, 14px);
   font-weight: 200;
   color: #f7e2df;
 }
@@ -236,12 +238,12 @@ body.dark-mode {
 
 .todo__item {
   padding: 8px 20px;
-  border-radius: 35px;
+  border-radius: clamp(20px, 3.5vw, 35px);
   background-color: #242f33;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 450px;
+  width: clamp(280px, 47vw, 450px);
   margin: 10px 0;
 }
 
@@ -256,8 +258,8 @@ body.dark-mode {
 }
 
 .todo__text {
-  width: 75%;
-  font-size: 20px;
+  width: 70%;
+  font-size: clamp(14px, 2vw, 20px);
   font-weight: 300;
   color: #948d8f;
 }
@@ -277,8 +279,8 @@ body.dark-mode {
 
 .todo__do,
 .todo__delete {
-  width: 40px;
-  height: 40px;
+  width: clamp(31px, 3vw, 40px);
+  height: clamp(31px, 3vw, 40px);
   border-radius: 50%;
   background-color: #909094;
   border: none;
