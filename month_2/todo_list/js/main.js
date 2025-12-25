@@ -3,6 +3,12 @@ const btnDefault = document.querySelector('.btn__default');
 const btnLight = document.querySelector('.btn__light');
 const btnDark = document.querySelector('.btn__dark');
 
+const itemBox = document.querySelector('.todo__items-box');
+const itemText = document.querySelector('.todo__text');
+
+const doBtn = document.querySelector('.todo__do');
+const deleteBtn = document.querySelector('.todo__delete');
+
 let mode = 'default';
 
 btnDefault.addEventListener('click', () => {
@@ -25,3 +31,37 @@ btnDark.addEventListener('click', () => {
     body.className = 'dark-mode';
   }
 });
+
+// виполнено и удаление
+itemBox.addEventListener('click', (event) => {
+  const deleteBtn = event.target.closest('.todo__delete');
+
+  if (!deleteBtn) return;
+
+  const itemTodo = event.target.closest('.todo__item');
+  itemTodo.remove();
+});
+
+itemBox.addEventListener('click', (event) => {
+  const doBtn = event.target.closest('.todo__do');
+  if (!doBtn) return;
+  const todoText = event.target.closest('.button__box').previousElementSibling;
+  todoText.classList.toggle('do');
+
+  // todoText.textContent.style.textDecoration = 'underline';
+});
+
+// doBtn.addEventListener('click', (event) => {
+//   console.log(todoItem);
+//   const todoText = (todoItem.querySelector('.todo__text').style.textDecoration =
+//     'underline');
+//   console.log(todoText);
+// });
+
+// deleteBtn.addEventListener('click', (event) => {
+//   if (event.target.closest('.todo__delete')) {
+//     const item = event.target.closest('.todo__item');
+//     console.log(item);
+//     item.remove();
+//   }
+// });

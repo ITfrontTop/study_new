@@ -55,6 +55,10 @@ body {
   height: 100%;
 }
 
+.do {
+  text-decoration: line-through;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
