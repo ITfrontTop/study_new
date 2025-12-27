@@ -32,7 +32,7 @@ btnDark.addEventListener('click', () => {
   }
 });
 
-// виполнено и удаление
+// кнопки выполнено и удаление
 itemBox.addEventListener('click', (event) => {
   const deleteBtn = event.target.closest('.todo__delete');
 
@@ -47,21 +47,4 @@ itemBox.addEventListener('click', (event) => {
   if (!doBtn) return;
   const todoText = event.target.closest('.button__box').previousElementSibling;
   todoText.classList.toggle('do');
-
-  // todoText.textContent.style.textDecoration = 'underline';
 });
-
-// doBtn.addEventListener('click', (event) => {
-//   console.log(todoItem);
-//   const todoText = (todoItem.querySelector('.todo__text').style.textDecoration =
-//     'underline');
-//   console.log(todoText);
-// });
-
-// deleteBtn.addEventListener('click', (event) => {
-//   if (event.target.closest('.todo__delete')) {
-//     const item = event.target.closest('.todo__item');
-//     console.log(item);
-//     item.remove();
-//   }
-// });
