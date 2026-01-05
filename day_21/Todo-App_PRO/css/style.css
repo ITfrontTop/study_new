@@ -16,6 +16,12 @@ body {
   color: #1c1726;
   background-color: #d3beff;
   /* font-size: 16px; */
+  transition: all 0.5s ease;
+}
+
+body.dark-mode {
+  color: #f2efef;
+  background-color: #1c1726;
 }
 
 .container {
@@ -37,6 +43,10 @@ body {
   font-weight: 700;
 }
 
+.dark-mode .logo {
+  color: #f2efef;
+}
+
 .theme {
   display: flex;
   align-items: center;
@@ -53,15 +63,50 @@ body {
   cursor: pointer;
 }
 
+.dark-mode .theme__btn {
+  border: 1px solid #f2efef;
+}
+
 .theme__btn::before {
   content: '';
   position: absolute;
   width: 16px;
   height: 16px;
   top: 1px;
-  left: 2px;
+  left: 3%;
   border-radius: 50%;
   background-color: #1c1726;
+
+  animation: to-left;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.dark-mode .theme__btn::before {
+  background-color: #f2efef;
+  animation: to-right;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes to-left {
+  0% {
+    left: 65%;
+  }
+
+  100% {
+    left: 3%;
+  }
+}
+
+@keyframes to-right {
+  0% {
+    left: 3%;
+  }
+
+  100% {
+    left: 65%;
+  }
 }
 
 .add__box {
@@ -78,12 +123,21 @@ body {
   outline: none;
 }
 
+.dark-mode .add__input {
+  border-color: #f2efef;
+}
+
 .add__btn {
   border: 1px solid #6929f2;
   border-radius: 0 1rem 1rem 0;
   padding: 0.5em;
   background-color: #7b44f2;
   color: #f2efef;
+}
+
+.dark-mode .add__btn {
+  border-color: #f2efef;
+  background-color: #1c1726;
 }
 
 .nav {
@@ -98,6 +152,11 @@ body {
   border-radius: 0.5rem;
   padding: 0.5em;
   cursor: pointer;
+}
+
+.dark-mode .all__btn,
+.dark-mode .done__btn {
+  border-color: #f2efef;
 }
 
 .all__btn:hover,
@@ -125,11 +184,15 @@ body {
 }
 
 .done {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin: 10px 0;
+  display: none;
+}
+
+.done.active {
+  display: flex;
 }
 
 .list__item {
@@ -140,6 +203,10 @@ body {
   border: 1px solid #6929f2;
   border-radius: 1rem;
   padding: 1rem;
+}
+
+.dark-mode .list__item {
+  border-color: #f2efef;
 }
 
 .list__item-text {
@@ -155,16 +222,25 @@ body {
 
 .list__item-do,
 .list__item-edit,
-.list__item-delete {
+.list__item-delete,
+.list__item-back {
   border: 1px solid #6929f2;
   border-radius: 1rem;
   padding: 0.5rem;
   cursor: pointer;
 }
 
+.dark-mode .list__item-do,
+.dark-mode .list__item-edit,
+.dark-mode .list__item-delete,
+.dark-mode .list__item-back {
+  border-color: #f2efef;
+}
+
 .list__item-do:hover,
 .list__item-edit:hover,
-.list__item-delete:hover {
+.list__item-delete:hover,
+.list__item-back:hover {
   background-color: #7b44f2;
   color: #f2efef;
 }
