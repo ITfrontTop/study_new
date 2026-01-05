@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-App_Pro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo__inner">
+            <a class="logo" href="#">Todo-App_Pro</a>
+          </div>
+          <div class="theme">
+            <div class="theme__text">dark</div>
+            <!-- light -->
+            <div class="theme__btn"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__inner">
+          <div class="add__box">
+            <input class="add__input" type="text" />
+            <button class="add__btn">Add task</button>
+          </div>
+
+          <nav class="nav">
+            <div class="all__btn active">all</div>
+            <div class="done__btn">done</div>
+          </nav>
+
+          <div class="list active">
+            <div class="list__item">
+              <p class="list__item-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <div class="list__item-box">
+                <div class="list__item-do">do</div>
+                <div class="list__item-edit">edit</div>
+                <div class="list__item-delete">delete</div>
+              </div>
+            </div>
+
+            <div class="list__item">
+              <p class="list__item-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <div class="list__item-box">
+                <div class="list__item-do">do</div>
+                <div class="list__item-edit">edit</div>
+                <div class="list__item-delete">delete</div>
+              </div>
+            </div>
+
+            <div class="list__item">
+              <p class="list__item-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <div class="list__item-box">
+                <div class="list__item-do">do</div>
+                <div class="list__item-edit">edit</div>
+                <div class="list__item-delete">delete</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="done"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

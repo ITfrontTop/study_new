@@ -1,0 +1,170 @@
+@import './reset.css';
+
+/*
+  color: #6929F2;
+  color: #7B44F2;
+  color: #1C1726;
+  color: #B79BF2;
+  color: #d3beff;
+  color: #F2561D;
+  color: #f2efef;
+
+*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #1c1726;
+  background-color: #d3beff;
+  /* font-size: 16px; */
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #1c1726;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme__btn {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 1px solid #1c1726;
+  cursor: pointer;
+}
+
+.theme__btn::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: #1c1726;
+}
+
+.add__box {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.add__input {
+  padding: 0.5em;
+  border: 1px solid #6929f2;
+  border-radius: 1rem 0 0 1rem;
+  background-color: transparent;
+  outline: none;
+}
+
+.add__btn {
+  border: 1px solid #6929f2;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0.5em;
+  background-color: #7b44f2;
+  color: #f2efef;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.all__btn,
+.done__btn {
+  border: 1px solid #6929f2;
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.all__btn:hover,
+.done__btn:hover {
+  background-color: #7b44f2;
+  color: #f2efef;
+}
+
+.all__btn.active,
+.done__btn.active {
+  background-color: #7b44f2;
+  color: #f2efef;
+}
+
+.list {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  display: none;
+}
+
+.list.active {
+  display: flex;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #6929f2;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.list__item-text {
+  outline: none;
+}
+
+.list__item-box {
+  display: flex;
+
+  align-items: center;
+  gap: 5px;
+}
+
+.list__item-do,
+.list__item-edit,
+.list__item-delete {
+  border: 1px solid #6929f2;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.list__item-do:hover,
+.list__item-edit:hover,
+.list__item-delete:hover {
+  background-color: #7b44f2;
+  color: #f2efef;
+}
